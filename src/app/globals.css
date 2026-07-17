@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #FFFFFF;
+  --color-text-primary: #000000;
+  --color-text-secondary: #6B7280;
+  --color-accent: #000000;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: #FAFAFA;
+  --color-foreground: #101010;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #101010;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #101010;
+  --color-primary: #101010;
+  --color-primary-foreground: #FAFAFA;
+  --color-secondary: #F3F4F6;
+  --color-secondary-foreground: #101010;
+  --color-muted: #F3F4F6;
+  --color-muted-foreground: #5E5E5E;
+  --color-accent-foreground: #101010;
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FAFAFA;
+  --color-border: rgba(16, 16, 16, 0.1);
+  --color-input: rgba(16, 16, 16, 0.2);
+  --color-ring: #4F46E5;
+  --radius: 0.5rem;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 transparent;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+::selection {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Tooltip Button */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  animation: pulse 3s infinite;
+}
+
+.tooltip-button:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.tooltip-button:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(110, 142, 251, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(110, 142, 251, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(110, 142, 251, 0); }
+}
+
+.tooltip-dropdown {
+  position: absolute;
+  top: 102%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 18px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 100;
+  pointer-events: none;
+  backdrop-filter: blur(10px);
+  min-width: 200px;
+}
+
+.tooltip-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255, 255, 255, 0.95) transparent;
+  filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, 0.1));
+}
+
+.tooltip-container:hover .tooltip-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+  pointer-events: auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon:hover svg {
+  transform: scale(1.2);
+  fill: white;
+}
+
+.social-icon.twitter:hover { background: linear-gradient(135deg, #1da1f2, #1a91da); }
+.social-icon.linkedin:hover { background: linear-gradient(135deg, #0077b5, #005e94); }
+.social-icon.instagram:hover { background: linear-gradient(135deg, #e4405f, #c13584); }
+.social-icon.dribbble:hover { background: linear-gradient(135deg, #ea4c89, #c2185b); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tooltip-button,
+  .tooltip-dropdown,
+  .social-icon,
+  .social-icon svg {
+    transition: none;
+    animation: none;
+  }
+}
