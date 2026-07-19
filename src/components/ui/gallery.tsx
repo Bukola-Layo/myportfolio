@@ -13,6 +13,14 @@ export const PhotoGallery = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const visibilityTimer = setTimeout(() => {
@@ -113,8 +121,17 @@ export const PhotoGallery = ({
     },
   ];
 
+  const photoSize = isMobile ? 120 : 220;
+  const spread = isMobile ? 80 : 320;
+
+  const mobilePhotos = photos.map((p, i) => ({
+    ...p,
+    x: `${(i - 2) * spread}px`,
+    y: `${[8, 18, 4, 12, 24][i]}px`,
+  }));
+
   return (
-    <section style={{ position: "relative", paddingTop: "8rem", paddingBottom: "2rem", background: "white" }}>
+    <section className="relative bg-white pt-20 md:pt-32 pb-8">
       <div
         style={{
           position: "absolute",
@@ -129,13 +146,13 @@ export const PhotoGallery = ({
           maskRepeat: "no-repeat",
         }}
       />
-      <p style={{ position: "relative", zIndex: 10, textAlign: "center", fontSize: "0.75rem", fontWeight: 300, textTransform: "uppercase", letterSpacing: "0.1em", color: "#5E5E5E", marginBottom: "1rem" }}>
+      <p className="relative z-10 text-center text-xs font-light uppercase tracking-widest text-[#5E5E5E] mb-4">
         A Journey Through Visual Stories
       </p>
-      <h1 style={{ position: "relative", zIndex: 10, fontSize: "clamp(3rem, 5vw, 4.5rem)", fontWeight: "bold", letterSpacing: "-0.05em", color: "#101010", textAlign: "center", marginBottom: "1rem" }}>
+      <h1 className="relative z-10 text-center font-bold tracking-tighter text-[#101010] mb-4 text-4xl md:text-6xl lg:text-7xl">
         Welcome to My Stories
       </h1>
-      <div className="relative h-[350px] w-full items-center justify-center lg:flex" style={{ zIndex: 10 }}>
+      <div className="relative z-10 flex w-full items-center justify-center h-[200px] md:h-[350px]">
         <motion.div
           className="relative mx-auto flex w-full max-w-7xl justify-center"
           initial={{ opacity: 0 }}
@@ -148,8 +165,11 @@ export const PhotoGallery = ({
             initial="hidden"
             animate={isLoaded ? "visible" : "hidden"}
           >
-            <div className="relative h-[220px] w-[220px]">
-              {[...photos].reverse().map((photo) => (
+            <div
+              className="relative"
+              style={{ width: photoSize, height: photoSize }}
+            >
+              {[...mobilePhotos].reverse().map((photo) => (
                 <motion.div
                   key={photo.id}
                   className="absolute left-0 top-0"
@@ -162,8 +182,8 @@ export const PhotoGallery = ({
                   }}
                 >
                   <Photo
-                    width={220}
-                    height={220}
+                    width={photoSize}
+                    height={photoSize}
                     src={photo.src}
                     alt="Family photo"
                     direction={photo.direction}
