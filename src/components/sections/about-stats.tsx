@@ -1,15 +1,28 @@
 export function AboutStats() {
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          {/* Left Text Content */}
-          <div className="flex flex-col">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-black mb-8">
+    <section id="about" style={{ position: "relative", paddingTop: "6rem", paddingBottom: "6rem", background: "white" }}>
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 0,
+          pointerEvents: "none",
+          backgroundImage: "radial-gradient(#e5e7eb 1px, transparent 1px)",
+          backgroundSize: "16px 16px",
+          WebkitMaskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, #000 70%, transparent 100%)",
+          maskImage: "radial-gradient(ellipse 60% 60% at 50% 50%, #000 70%, transparent 100%)",
+          WebkitMaskRepeat: "no-repeat",
+          maskRepeat: "no-repeat",
+        }}
+      />
+      <div style={{ position: "relative", zIndex: 10, maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(1, 1fr)", gap: "4rem 6rem", alignItems: "start" }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <h2 style={{ fontSize: "clamp(2.25rem, 4vw, 3.75rem)", fontWeight: 500, letterSpacing: "-0.025em", color: "#101010", marginBottom: "2rem" }}>
               A Team of Builders & Innovators
             </h2>
-            <div className="space-y-6 text-gray-500 text-lg">
-              <p>
+            <div style={{ fontSize: "1.125rem", color: "#6b7280", lineHeight: 1.75 }}>
+              <p style={{ marginBottom: "1.5rem" }}>
                 We are a digital agency passionate about creating impactful software. 
                 Our team blends strategic design with robust engineering to deliver 
                 products that users love and businesses rely on.
@@ -22,24 +35,23 @@ export function AboutStats() {
             </div>
           </div>
 
-          {/* Right Stats */}
-          <div className="flex flex-col gap-12 pt-4">
+          <div style={{ display: "flex", flexDirection: "column", gap: "3rem", paddingTop: "1rem" }}>
             <div>
-              <div className="text-6xl md:text-8xl font-medium tracking-tighter text-black mb-2">
+              <div style={{ fontSize: "clamp(3.75rem, 6vw, 6rem)", fontWeight: 500, letterSpacing: "-0.05em", color: "#101010", marginBottom: "0.5rem" }}>
                 5K+
               </div>
-              <div className="text-sm font-medium uppercase tracking-widest text-gray-400">
+              <div style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9ca3af" }}>
                 Projects Delivered
               </div>
             </div>
             
-            <div className="h-px w-full bg-black/10"></div>
+            <div style={{ height: "1px", width: "100%", background: "rgba(0,0,0,0.1)" }}></div>
 
             <div>
-              <div className="text-6xl md:text-8xl font-medium tracking-tighter text-black mb-2">
+              <div style={{ fontSize: "clamp(3.75rem, 6vw, 6rem)", fontWeight: 500, letterSpacing: "-0.05em", color: "#101010", marginBottom: "0.5rem" }}>
                 $1M+
               </div>
-              <div className="text-sm font-medium uppercase tracking-widest text-gray-400">
+              <div style={{ fontSize: "0.75rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", color: "#9ca3af" }}>
                 Revenue Generated
               </div>
             </div>

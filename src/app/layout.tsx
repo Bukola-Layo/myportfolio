@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { TubelightNavbar } from "@/components/ui/tubelight-navbar";
+import { CTASection } from "@/components/sections/cta-section";
 
 import { siteConfig } from "@/content/site";
 import "./globals.css";
@@ -54,7 +55,7 @@ export default function RootLayout({
       <body className="min-h-full bg-white font-sans text-black">
         <div className="flex min-h-screen flex-col">
           <TubelightNavbar />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1">{children}<CTASection /></main>
         </div>
       </body>
     </html>
