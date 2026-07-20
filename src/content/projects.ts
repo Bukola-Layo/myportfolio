@@ -368,7 +368,7 @@ export const projects: CaseStudy[] = [
     category: "Product Design",
     description: "A product design project focused on crafting intuitive and engaging user experiences.",
     liveUrl: "https://buma.vercel.app",
-    heroImage: "/public/images/200shots_so.png",
+    heroImage: "/public/images/buma.png",
     hero: {
       role: "Product Designer",
       timeline: "TBD",
