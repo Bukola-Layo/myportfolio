@@ -81,7 +81,7 @@ export const PhotoGallery = ({
       y: "15px",
       zIndex: 50,
       direction: "left" as Direction,
-      src: "https://images.pexels.com/photos/32025694/pexels-photo-32025694/free-photo-of-romantic-wedding-in-ancient-ruins.jpeg",
+      src: "/images/IMG_4686.JPG",
     },
     {
       id: 2,
@@ -90,7 +90,7 @@ export const PhotoGallery = ({
       y: "32px",
       zIndex: 40,
       direction: "left" as Direction,
-      src: "https://images.pexels.com/photos/31596551/pexels-photo-31596551/free-photo-of-winter-scene-with-lake-view-in-van-turkiye.jpeg",
+      src: "/images/Snapchat-860967844.jpg",
     },
     {
       id: 3,
@@ -99,7 +99,7 @@ export const PhotoGallery = ({
       y: "8px",
       zIndex: 30,
       direction: "right" as Direction,
-      src: "https://images.pexels.com/photos/31890053/pexels-photo-31890053/free-photo-of-moody-portrait-with-heart-shaped-light.jpeg",
+      src: "/images/IMG-20260712-WA0008.jpg",
     },
     {
       id: 4,
@@ -108,7 +108,7 @@ export const PhotoGallery = ({
       y: "22px",
       zIndex: 20,
       direction: "right" as Direction,
-      src: "https://images.pexels.com/photos/19936068/pexels-photo-19936068/free-photo-of-women-sitting-on-hilltop-with-clouds-below.jpeg",
+      src: "/images/image1.png",
     },
     {
       id: 5,
@@ -117,7 +117,7 @@ export const PhotoGallery = ({
       y: "44px",
       zIndex: 10,
       direction: "left" as Direction,
-      src: "https://images.pexels.com/photos/20494995/pexels-photo-20494995/free-photo-of-head-of-peacock.jpeg",
+      src: "/images/chatgpt-image.png",
     },
   ];
 
