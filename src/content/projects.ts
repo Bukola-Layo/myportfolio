@@ -298,7 +298,7 @@ export const projects: CaseStudy[] = [
     category: "EdTech / Web Platform",
     description: "Reimagining the higher education digital experience for students, faculty, and staff.",
     liveUrl: "https://sky-meridian-college.vercel.app",
-    heroImage: "/public/images/409shots_so.png",
+    heroImage: "/public/images/sky.png",
     hero: {
       role: "Product Designer",
       timeline: "5 months",
@@ -329,11 +329,11 @@ export const projects: CaseStudy[] = [
   },
   {
     slug: "m360-suite",
-    title: "M360 Suite",
+    title: "DM360 Suite",
     category: "Productivity SaaS",
     description: "A comprehensive productivity ecosystem integrating project management, communication, and analytics.",
-    liveUrl: "https://m360-suite.vercel.app",
-    heroImage: "/public/images/Spl hero.png",
+    liveUrl: "https://dm360-suite.vercel.app",
+    heroImage: "/public/images/dm360.png",
     hero: {
       role: "Lead Product Designer",
       timeline: "10 months",
@@ -345,7 +345,7 @@ export const projects: CaseStudy[] = [
         type: "challenge",
         title: "Challenge",
         content: [
-          "The M360 Suite was a bundle of 4 previously separate productivity tools acquired over 2 years.",
+          "The DM360 Suite was a bundle of 4 previously separate productivity tools acquired over 2 years.",
           "Users complained about inconsistent interfaces, duplicate features, and poor cross-tool integration.",
           "Cross-tool workflows required manual context-switching, disrupting user focus and productivity.",
         ],
@@ -358,6 +358,29 @@ export const projects: CaseStudy[] = [
           "Reduce cross-tool workflow friction by 70% through deep integration.",
           "Achieve 85%+ user retention rate post-unification.",
           "Establish a shared component library for future product development.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "buma",
+    title: "Buma",
+    category: "Product Design",
+    description: "A product design project focused on crafting intuitive and engaging user experiences.",
+    liveUrl: "https://buma.vercel.app",
+    heroImage: "/public/images/200shots_so.png",
+    hero: {
+      role: "Product Designer",
+      timeline: "TBD",
+      team: "TBD",
+      framing: "Crafting intuitive and engaging user experiences.",
+    },
+    sections: [
+      {
+        type: "challenge",
+        title: "Challenge",
+        content: [
+          "Coming soon.",
         ],
       },
     ],

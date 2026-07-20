@@ -28,6 +28,6 @@ export const testimonials: Testimonial[] = [
     quote: "Bukola doesn't just design beautiful interfaces — she designs systems that solve business problems. Our user satisfaction scores increased by 40% after the redesign.",
     name: "Emily Rodriguez",
     role: "CEO",
-    company: "M360 Suite",
+    company: "DM360 Suite",
   },
 ];

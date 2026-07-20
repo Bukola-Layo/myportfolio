@@ -96,7 +96,7 @@ export default function WorkPage() {
               >
                 <div style={{ position: "relative", aspectRatio: "4/3", width: "100%", overflow: "hidden", borderRadius: "1rem", background: "#f3f4f6", marginBottom: "1rem" }}>
                   <Image
-                    src={projectImages[projects.indexOf(project) % projectImages.length]}
+                    src={project.heroImage || projectImages[projects.indexOf(project) % projectImages.length]}
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
