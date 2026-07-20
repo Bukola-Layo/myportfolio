@@ -15,19 +15,22 @@ const heroTexts = [
   "UX Researcher",
 ];
 
-const projectImages = [
-  "/public/images/200shots_so.png",
-  "/public/images/67shots_so.png",
-  "/public/images/232shots_so.png",
+const carouselImages = [
   "/public/images/409shots_so.png",
   "/public/images/Spl hero.png",
+  "/public/images/2shots_so.png",
+  "/public/images/222shots_so.png",
+  "/public/images/Presentation wallet.png",
+  "/public/images/present.png",
+  "/public/images/persona shuppa.png",
+  "/public/images/mental health 2.png",
 ];
 
 const carouselItems = projects.map((p, i) => ({
   title: p.title,
   category: p.category,
   slug: p.slug,
-  image: projectImages[i % projectImages.length],
+  image: carouselImages[i % carouselImages.length],
 }));
 
 export function Hero() {

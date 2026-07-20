@@ -2,14 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/content/projects";
 
-const projectImages = [
-  "/public/images/200shots_so.png",
-  "/public/images/67shots_so.png",
-  "/public/images/232shots_so.png",
-  "/public/images/409shots_so.png",
-  "/public/images/Spl hero.png",
-];
-
 export function PortfolioGrid() {
   return (
     <section id="projects" className="overflow-hidden bg-black py-24 rounded-t-[3rem] lg:rounded-t-[5rem]">
@@ -32,7 +24,7 @@ export function PortfolioGrid() {
               <div className="flex flex-col gap-4">
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white/5">
                   <Image
-                    src={projectImages[idx % projectImages.length]}
+                    src={project.heroImage || "/public/images/200shots_so.png"}
                     alt={project.title}
                     fill
                     sizes="400px"
