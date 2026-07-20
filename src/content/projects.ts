@@ -3,6 +3,8 @@ export interface CaseStudy {
   title: string;
   category: string;
   description: string;
+  liveUrl?: string;
+  heroImage?: string;
   hero: {
     role: string;
     timeline: string;
@@ -25,6 +27,8 @@ export const projects: CaseStudy[] = [
     title: "Loopra",
     category: "SaaS Product Design",
     description: "Redesigning the developer experience for a CI/CD platform serving 50K+ teams.",
+    liveUrl: "https://loopra.vercel.app",
+    heroImage: "/public/images/200shots_so.png",
     hero: {
       role: "Lead Product Designer",
       timeline: "6 months",
@@ -174,12 +178,14 @@ export const projects: CaseStudy[] = [
     slug: "community-shield",
     title: "Community Shield",
     category: "Civic Tech / Mobile",
-    description: "Designing a safety platform connecting communities with real-time emergency response.",
+    description: "A security digital product focused on ensuring the safety of people in their homes, offices, and events. Designed for estate management and surveillance with access pass features, verification features, and emergency alert features.",
+    liveUrl: "https://community-shield.vercel.app",
+    heroImage: "/public/images/67shots_so.png",
     hero: {
-      role: "Product Designer",
+      role: "Lead Product Designer",
       timeline: "4 months",
       team: "2 designers, 8 engineers, 1 product manager",
-      framing: "How might we make emergency response feel fast, accessible, and community-driven?",
+      framing: "Community Shield is a security digital product focused on ensuring the safety of people in their homes, offices, and events. The product is designed for estate management and surveillance to ensure the safety of users by providing them with access pass features, verification features, as well as emergency alert features. I led the design and research aspect of this product and collaborated with developers, product manager, and technical lead to deliver a smooth product suitable for use and acceptance in the market.",
     },
     sections: [
       {
@@ -246,6 +252,8 @@ export const projects: CaseStudy[] = [
     title: "HRM360",
     category: "Enterprise SaaS",
     description: "Unifying HR workflows across 150+ countries for a global workforce management platform.",
+    liveUrl: "https://hrm360.vercel.app",
+    heroImage: "/public/images/232shots_so.png",
     hero: {
       role: "Senior Product Designer",
       timeline: "8 months",
@@ -289,6 +297,8 @@ export const projects: CaseStudy[] = [
     title: "Sky Meridian College",
     category: "EdTech / Web Platform",
     description: "Reimagining the higher education digital experience for students, faculty, and staff.",
+    liveUrl: "https://sky-meridian-college.vercel.app",
+    heroImage: "/public/images/409shots_so.png",
     hero: {
       role: "Product Designer",
       timeline: "5 months",
@@ -322,6 +332,8 @@ export const projects: CaseStudy[] = [
     title: "M360 Suite",
     category: "Productivity SaaS",
     description: "A comprehensive productivity ecosystem integrating project management, communication, and analytics.",
+    liveUrl: "https://m360-suite.vercel.app",
+    heroImage: "/public/images/Spl hero.png",
     hero: {
       role: "Lead Product Designer",
       timeline: "10 months",

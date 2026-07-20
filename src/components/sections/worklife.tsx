@@ -12,28 +12,28 @@ type TimelineEntry = {
 
 const timelineData: TimelineEntry[] = [
   {
-    date: "2018",
-    title: "Started the Journey",
+    date: "January 2026 — Present",
+    title: "UIUX Instructor — Mahdumo Academy",
     content:
-      "Began my career as a Product Designer, focusing on creating intuitive and user-centric digital experiences for early-stage startups.",
+      "Developed structured UI/UX curriculum covering the fundamentals of design principles. Facilitated hands-on UI/UX design training, guiding students through real-world projects, design tools, and mentored them toward building job-ready portfolios.",
   },
   {
-    date: "2020",
-    title: "First Major Launch",
+    date: "March 2025 — Present",
+    title: "Lead UIUX Designer — M360 Solutions",
     content:
-      "Led the design of a flagship SaaS product from concept to launch, establishing a design system and workflow that scaled with the team.",
+      "Collaborated with developers and product managers to deliver user-centric solutions. Designed dashboards, landing pages, and mobile apps with a focus on conversion and usability across different industries. Conducted competitor analysis and user research to guide product decisions.",
   },
   {
-    date: "2023",
-    title: "Full-Stack Evolution",
+    date: "May 2025 — Dec 2025",
+    title: "Lead UIUX Designer — IJM Global Limited",
     content:
-      "Expanded into frontend engineering, bridging the gap between design and development to build high-performance web applications.",
+      "Developed low-fidelity and high-fidelity designs. Conducted user research. Developed design systems for Community Shield to ensure consistency across design. Collaborated with developers to ensure smooth handover of projects. Developed and maintained dynamic, responsive, user-friendly designs.",
   },
   {
-    date: "2025",
-    title: "Independent Design & Dev",
+    date: "March 2024 — May 2025",
+    title: "UIUX Designer — Diakrino Limited",
     content:
-      "Working as an independent Product Designer and Developer, partnering with ambitious companies to create impactful digital products.",
+      "Developed design systems for projects. Collaborated with other designers to create seamless designs. Collaborated with developers to ensure smooth handover of projects. Developed and maintained dynamic, responsive, user-friendly designs.",
   },
 ];
 

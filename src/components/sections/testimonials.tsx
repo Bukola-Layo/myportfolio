@@ -2,8 +2,8 @@ import { ClientsSection } from "@/components/ui/testimonial-card";
 import { testimonials } from "@/content/testimonials";
 
 const stats = [
-  { value: "50+", label: "Projects Delivered" },
-  { value: "30+", label: "Happy Clients" },
+  { value: "10+", label: "Projects Delivered" },
+  { value: "3+", label: "Years of Experience" },
   { value: "4.9", label: "Average Rating" },
 ];
 

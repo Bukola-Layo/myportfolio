@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { TubelightNavbar } from "@/components/ui/tubelight-navbar";
 import { CTASection } from "@/components/sections/cta-section";
+import { WhatsAppButton } from "@/components/shared/whatsapp-button";
 
 import { siteConfig } from "@/content/site";
 import "./globals.css";
@@ -56,6 +57,7 @@ export default function RootLayout({
         <div className="flex min-h-screen flex-col">
           <TubelightNavbar />
           <main className="flex-1">{children}<CTASection /></main>
+          <WhatsAppButton />
         </div>
       </body>
     </html>

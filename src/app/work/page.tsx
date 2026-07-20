@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/content/projects";
 
 const projectImages = [
@@ -85,28 +86,54 @@ export default function WorkPage() {
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 32rem), 1fr))", gap: "2rem" }}>
           {filteredProjects.map((project) => (
-            <Link
+            <div
               key={project.slug}
-              href={`/work/${project.slug}`}
-              style={{ display: "block", textDecoration: "none" }}
+              style={{ display: "flex", flexDirection: "column", gap: "0" }}
             >
-              <div style={{ position: "relative", aspectRatio: "4/3", width: "100%", overflow: "hidden", borderRadius: "1rem", background: "#f3f4f6", marginBottom: "1rem" }}>
-                <Image
-                  src={projectImages[projects.indexOf(project) % projectImages.length]}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div style={{ fontSize: "0.75rem", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.1em", color: "#5E5E5E", marginBottom: "0.5rem" }}>
-                {project.category}
-              </div>
-              <h2 style={{ fontSize: "1.5rem", fontWeight: 500, color: "#101010" }}>
-                {project.title}
-              </h2>
-              <p style={{ marginTop: "0.5rem", color: "#5E5E5E" }}>{project.description}</p>
-            </Link>
+              <Link
+                href={`/work/${project.slug}`}
+                style={{ display: "block", textDecoration: "none" }}
+              >
+                <div style={{ position: "relative", aspectRatio: "4/3", width: "100%", overflow: "hidden", borderRadius: "1rem", background: "#f3f4f6", marginBottom: "1rem" }}>
+                  <Image
+                    src={projectImages[projects.indexOf(project) % projectImages.length]}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <div style={{ fontSize: "0.75rem", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.1em", color: "#5E5E5E", marginBottom: "0.5rem" }}>
+                  {project.category}
+                </div>
+                <h2 style={{ fontSize: "1.5rem", fontWeight: 500, color: "#101010" }}>
+                  {project.title}
+                </h2>
+                <p style={{ marginTop: "0.5rem", color: "#5E5E5E" }}>{project.description}</p>
+              </Link>
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.375rem",
+                    fontSize: "0.875rem",
+                    fontWeight: 500,
+                    color: "#4F46E5",
+                    textDecoration: "none",
+                    marginTop: "1rem",
+                    alignSelf: "flex-start",
+                  }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  View Live
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              )}
+            </div>
           ))}
         </div>
 
