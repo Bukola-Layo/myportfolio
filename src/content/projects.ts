@@ -5,6 +5,7 @@ export interface CaseStudy {
   description: string;
   liveUrl?: string;
   heroImage?: string;
+  status?: string;
   hero: {
     role: string;
     timeline: string;
@@ -27,8 +28,8 @@ export const projects: CaseStudy[] = [
     title: "Loopra",
     category: "SaaS Product Design",
     description: "Redesigning the developer experience for a CI/CD platform serving 50K+ teams.",
-    liveUrl: "https://loopra.vercel.app",
-    heroImage: "/public/images/200shots_so.png",
+    liveUrl: "https://loopra.vercel.app/",
+    heroImage: "/public/images/loopra.png",
     hero: {
       role: "Lead Product Designer",
       timeline: "6 months",
@@ -179,7 +180,7 @@ export const projects: CaseStudy[] = [
     title: "Community Shield",
     category: "Civic Tech / Mobile",
     description: "A security digital product focused on ensuring the safety of people in their homes, offices, and events. Designed for estate management and surveillance with access pass features, verification features, and emergency alert features.",
-    liveUrl: "https://community-shield.vercel.app",
+    liveUrl: "https://play.google.com/store/apps/details?id=com.ijm.community.shield&pcampaignid=web_share",
     heroImage: "/public/images/67shots_so.png",
     hero: {
       role: "Lead Product Designer",
@@ -252,7 +253,7 @@ export const projects: CaseStudy[] = [
     title: "HRM360",
     category: "Enterprise SaaS",
     description: "Unifying HR workflows across 150+ countries for a global workforce management platform.",
-    liveUrl: "https://hrm360.vercel.app",
+    status: "In Development",
     heroImage: "/public/images/232shots_so.png",
     hero: {
       role: "Senior Product Designer",
@@ -297,7 +298,7 @@ export const projects: CaseStudy[] = [
     title: "Sky Meridian College",
     category: "EdTech / Web Platform",
     description: "Reimagining the higher education digital experience for students, faculty, and staff.",
-    liveUrl: "https://sky-meridian-college.vercel.app",
+    liveUrl: "https://skymeridianedu.com/",
     heroImage: "/public/images/sky.png",
     hero: {
       role: "Product Designer",
@@ -332,7 +333,7 @@ export const projects: CaseStudy[] = [
     title: "DM360 Suite",
     category: "Productivity SaaS",
     description: "A comprehensive productivity ecosystem integrating project management, communication, and analytics.",
-    liveUrl: "https://dm360-suite.vercel.app",
+    status: "In Development",
     heroImage: "/public/images/dm360.png",
     hero: {
       role: "Lead Product Designer",
@@ -367,7 +368,7 @@ export const projects: CaseStudy[] = [
     title: "Buma",
     category: "Product Design",
     description: "A product design project focused on crafting intuitive and engaging user experiences.",
-    liveUrl: "https://buma.vercel.app",
+    liveUrl: "https://mybuma.com/",
     heroImage: "/public/images/buma.png",
     hero: {
       role: "Product Designer",

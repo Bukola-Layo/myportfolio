@@ -27,11 +27,13 @@ export default function WorkPage() {
 
   const filteredProjects = activeTab === "All"
     ? projects
-    : projects.filter((p) =>
-        categoryMap[activeTab]?.some((cat) =>
-          p.category.toLowerCase().includes(cat.toLowerCase())
-        )
-      );
+    : activeTab === "What I Built"
+      ? projects.filter((p) => p.slug === "loopra" || p.slug === "sky-meridian-college")
+      : projects.filter((p) =>
+          categoryMap[activeTab]?.some((cat) =>
+            p.category.toLowerCase().includes(cat.toLowerCase())
+          )
+        );
 
   return (
     <section style={{ position: "relative", paddingTop: "8rem", paddingBottom: "6rem", minHeight: "100vh", background: "white" }}>
@@ -106,9 +108,16 @@ export default function WorkPage() {
                 <div style={{ fontSize: "0.75rem", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.1em", color: "#5E5E5E", marginBottom: "0.5rem" }}>
                   {project.category}
                 </div>
-                <h2 style={{ fontSize: "1.5rem", fontWeight: 500, color: "#101010" }}>
-                  {project.title}
-                </h2>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap" }}>
+                  <h2 style={{ fontSize: "1.5rem", fontWeight: 500, color: "#101010" }}>
+                    {project.title}
+                  </h2>
+                  {project.status && (
+                    <span style={{ fontSize: "0.7rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", padding: "0.2rem 0.6rem", borderRadius: "9999px", background: "#FEF3C7", color: "#92400E" }}>
+                      {project.status}
+                    </span>
+                  )}
+                </div>
                 <p style={{ marginTop: "0.5rem", color: "#5E5E5E" }}>{project.description}</p>
               </Link>
               {project.liveUrl && (
